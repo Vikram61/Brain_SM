@@ -24,7 +24,7 @@
   <canvas id="sentimentChart" width="800" height="400"></canvas>
 
   <script>
-    fetch("sentiment_data.json?" + new Date().getTime())
+    fetch("/sentiment_data.json?" + new Date().getTime())
       .then(res => res.json())
       .then(data => {
         const labels = data.map((_, i) => `Comment ${i + 1}`);
